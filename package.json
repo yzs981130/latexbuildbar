@@ -1,25 +1,36 @@
 {
   "name": "latexbuildbar",
-	"displayName": "LatexBuildBar",
+	"displayName": "LaTeXBuildBar",
 	"description": "Add LaTeX Workshop build in TouchBar",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.66.0"
 	},
-	"categories": [
-		"Other"
-	],
+	"author": "Zhisheng Ye <yzs981130@126.com>",
+	"publisher": "zhishengye",
+	"license": "MIT",
+	"repository": "github:yzs981130/latexbuildbar",
+	"bugs": "https://github.com/yzs981130/latexbuildbar/issues",
+	"homepage": "https://github.com/yzs981130/latexbuildbar",
 	"activationEvents": [
-        "onCommand:latexbuildbar.helloWorld"
+        "*"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "latexbuildbar.helloWorld",
-				"title": "Hello World"
+				"command": "latexbuilder.buildLaTeX",
+				"title": "Build LaTeX"
 			}
-		]
+		],
+		"menus": {
+			"touchBar": [
+				{
+					"command": "latexbuilder.buildLaTeX",
+					"group": "g1"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
