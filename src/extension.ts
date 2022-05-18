@@ -24,6 +24,12 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	context.subscriptions.push(buildLaTeX);
+
+	let bibalignsort = vscode.commands.registerCommand('latexbuilder.bibalignsort', () => {
+		vscode.commands.executeCommand('latex-workshop.bibalignsort');
+	});
+
+	context.subscriptions.push(bibalignsort);
 }
 
 // this method is called when your extension is deactivated

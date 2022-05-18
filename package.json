@@ -2,7 +2,7 @@
   "name": "latexbuildbar",
 	"displayName": "LaTeXBuildBar",
 	"description": "Add LaTeX Workshop build in TouchBar",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.66.0"
 	},
@@ -21,6 +21,10 @@
 			{
 				"command": "latexbuilder.buildLaTeX",
 				"title": "Build LaTeX"
+			},
+			{
+				"command": "latexbuilder.bibalignsort",
+				"title": "Beautify Bib"
 			}
 		],
 		"menus": {
@@ -28,6 +32,10 @@
 				{
 					"command": "latexbuilder.buildLaTeX",
 					"group": "g1"
+				},
+				{
+					"command": "latexbuilder.bibalignsort",
+					"group": "g2"
 				}
 			]
 		}
